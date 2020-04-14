@@ -1,0 +1,104 @@
+<div class="container-fluid">
+    <h1>myAngularFirebase works!!!</h1>
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callCrearCuentaEmailPass()' type='button'>crearCuentaEmailPass</button>
+            <p> {{ respCrearCuentaEmailPass | json }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callautEmailPass()' type='button'>login(autEmailPass)</button>
+            <p> respAutEmailPass - {{ respAutEmailPass| json }}</p>
+            <!-- <p> respAutEmailPass - {{ autService.currentUser | json }}</p> -->
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callAuthCuentaFacebook()' type='button'>login(authCuentaFacebook)</button>
+            <p> respAuthCuentaFacebook - {{ respAuthCuentaFacebook | json }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callAuthCuentaTwitter()' type='button'>login(authCuentaTwitter)</button>
+            <p> respAuthCuentaTwitter - {{ respAuthCuentaTwitter | json }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callAuthCuentaGitHub()' type='button'>login(authCuentaGitHub)</button>
+            <p> respAuthCuentaGitHub - {{ respAuthCuentaGitHub | json }}</p>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callsignOut()' type='button'>logout(signOut() )</button>
+            <p> respSignOut - {{ respSignOut }}</p>
+        </div>
+    </div>
+
+
+    <div class="card bg-primary">
+        <div class="card-body">
+            <p>Estado Current user: - {{autService.currentUserName | json }}</p>
+            <p>currentUser: - {{autService.currentUser | json }}</p>
+        </div>
+    </div>
+
+    <div class="card bg-primary">
+        <div class="card-body">
+            <p>Datos usuario: - {{autService.dataAuth | json }}</p>
+
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Acces a base dades -->
+
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callAddData()' type='button'>Afegir un document (addData() )</button>
+            <p> document - {{ respAddData }} - afegit</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callReadDocument()' type='button'>llegir un document (readDocument() )</button>
+            <p> document - {{ respReadDocument | json}} - llegit</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button (click)='callDeleteDocument()' type='button'>Esborrar un document (deleteDocument() )</button>
+            <p> document - {{ respDeleteDocument }} - esborrat</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+
+            <p> Relació de documents - {{ dataService.documentsCollection }} </p>
+            <p> uid de cada document - {{ dataService.uidsDeCadaDocument }} </p>
+
+
+        </div>
+    </div>
+
+</div>
